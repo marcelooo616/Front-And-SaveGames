@@ -46,14 +46,22 @@ function Navbar() {
             },
 
             logo: {
-                
-                backgroundColor: 'blue',
+                width: '3.5rem',
+                color: 'white',
+
 
             },
-            text:{
-                fontSize:'1.70rem',
-                paddingTop:'0.50rem',
-                
+            logoDirection: {
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexDirection: 'column',
+
+            },
+            text: {
+                fontSize: '1.70rem',
+                paddingTop: '0.50rem',
+
             },
 
             button: {
@@ -71,7 +79,7 @@ function Navbar() {
 
             },
             toolbarBot: {
-                backgroundColor: '#1955c9',
+                backgroundColor: 'black',
             },
 
             inputInput: {
@@ -93,9 +101,9 @@ function Navbar() {
                     <Grid xs={12} container direction="row-reverse" className={classes.toobarTop}  >
                         <Box m={1}>Sobre</Box>
                         <Box m={1}>Contato</Box>
-                    </Grid>                 
+                    </Grid>
                     <Grid xs={12} container direction="row" justifyContent="space-evenly">
-                    <Box m={1} className={classes.text}>
+                        <Box m={1} className={classes.text}>
                             <span className="font-logo">SAVEGAMES</span>
                         </Box>
                         <Box m={1} className={classes.search}>
@@ -107,7 +115,7 @@ function Navbar() {
                                 classes={{
 
                                     input: classes.inputInput,
-                                }}/>
+                                }} />
                         </Box>
                         <Box m={1}  >
                             <IconButton aria-label="add to shopping cart" className={classes.button}>
@@ -115,16 +123,28 @@ function Navbar() {
                             </IconButton>
                         </Box>
                         <Box m={1}>
-                            <IconButton aria-label="add to shopping cart"  className={classes.button}>
+                            <IconButton aria-label="add to shopping cart" className={classes.button}>
                                 <AddShoppingCartIcon />
                             </IconButton>
                         </Box>
                     </Grid>
                     <Grid xs={12} container direction="row" alignItems="center" justifyContent="space-evenly" className={classes.toolbarBot}>
-                        <Box component='span' m={1}>PlayStation</Box>
-                        <Box component='span' m={1}>Xbox</Box>
-                        <Box component='span' m={1}>Nintendo</Box>
-                        <Box component='span' m={1}>PCs</Box>
+                        <Box component='span' m={1} className={classes.logoDirection}>
+                            <img src="https://i.imgur.com/VftwHXN.png" className={classes.logo} />
+                            <span>PlayStation</span>
+                        </Box>
+                        <Box component='span' m={1} className={classes.logoDirection}>
+                            <img src="https://i.imgur.com/HSodJNO.png" className={classes.logo} />
+                            <span>Xbox</span>
+                        </Box>
+                        <Box component='span' m={1} className={classes.logoDirection}>
+                            <img src="https://i.imgur.com/qaiCvi0.png" className={classes.logo} />
+                            <span>Nintendo</span>
+                        </Box>
+                        <Box component='span' m={1} className={classes.logoDirection}>
+                            <img src="https://i.imgur.com/ScXZmz8.png" className={classes.logo} />
+                            <span>PCs</span>
+                        </Box>
                     </Grid>
                 </Grid>
             </Toolbar>

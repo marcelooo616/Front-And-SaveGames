@@ -22,6 +22,10 @@ import { Box } from "@material-ui/core";
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import LoginIcon from '@mui/icons-material/Login';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import PlayStation from "./PlayStation";
+import Xbox from "./Xbox";
+import Nintendo from "./Nintendo";
+import PCs from "./PCs";
 
 
 function Navbar() {
@@ -46,8 +50,13 @@ function Navbar() {
             },
 
             logo: {
-                width: '3.5rem',
+                width: '3rem',
                 color: 'white',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexDirection: 'column',
+
 
 
             },
@@ -92,6 +101,8 @@ function Navbar() {
 
     const classes = useStyles();
 
+    
+
     return (
 
         <AppBar position="static" >
@@ -104,7 +115,7 @@ function Navbar() {
                     </Grid>
                     <Grid xs={12} container direction="row" justifyContent="space-evenly">
                         <Box m={1} className={classes.text}>
-                            <span className="font-logo">SAVEGAMES</span>
+                            <span className="font-logo">SAVEGAME</span>
                         </Box>
                         <Box m={1} className={classes.search}>
 
@@ -130,20 +141,22 @@ function Navbar() {
                     </Grid>
                     <Grid xs={12} container direction="row" alignItems="center" justifyContent="space-evenly" className={classes.toolbarBot}>
                         <Box component='span' m={1} className={classes.logoDirection}>
-                            <img src="https://i.imgur.com/VftwHXN.png" className={classes.logo} />
-                            <span>PlayStation</span>
+                           <Box className={classes.logo}>
+                                 <PlayStation  />
+                           </Box>
+                                            
                         </Box>
                         <Box component='span' m={1} className={classes.logoDirection}>
-                            <img src="https://i.imgur.com/HSodJNO.png" className={classes.logo} />
-                            <span>Xbox</span>
+                            <Box className={classes.logo}  >
+                                  <Xbox/>
+                                  
+                            </Box>           
                         </Box>
                         <Box component='span' m={1} className={classes.logoDirection}>
-                            <img src="https://i.imgur.com/qaiCvi0.png" className={classes.logo} />
-                            <span>Nintendo</span>
+                           <Nintendo/>
                         </Box>
                         <Box component='span' m={1} className={classes.logoDirection}>
-                            <img src="https://i.imgur.com/ScXZmz8.png" className={classes.logo} />
-                            <span>PCs</span>
+                            <PCs/>
                         </Box>
                     </Grid>
                 </Grid>

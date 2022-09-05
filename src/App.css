@@ -15,3 +15,13 @@
 .font-logo{
   font-family: 'Varela Round', sans-serif;
 }
+
+.padding-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+

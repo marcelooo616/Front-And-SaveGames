@@ -85,6 +85,7 @@ function Navbar() {
                 backgroundColor: '#4169e1',
                 paddingLeft: '0px',
                 paddingRight: '0px',
+                
 
             },
             toolbarBot: {
@@ -96,7 +97,7 @@ function Navbar() {
                 // vertical padding + font size from searchIcon
                 paddingLeft: `calc(1em + ${theme.spacing(6)}px)`,
             },
-
+            
         }));
 
     const classes = useStyles();
@@ -105,7 +106,7 @@ function Navbar() {
 
     return (
 
-        <AppBar position="static" >
+        <AppBar position="static"  >
 
             <Toolbar className={classes.toolbarMid}>
                 <Grid container>

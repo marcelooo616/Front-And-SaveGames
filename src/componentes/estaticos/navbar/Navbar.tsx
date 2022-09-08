@@ -26,6 +26,7 @@ import PlayStation from "./PlayStation";
 import Xbox from "./Xbox";
 import Nintendo from "./Nintendo";
 import PCs from "./PCs";
+import { Link } from 'react-router-dom';
 
 
 function Navbar() {
@@ -85,7 +86,7 @@ function Navbar() {
                 backgroundColor: '#4169e1',
                 paddingLeft: '0px',
                 paddingRight: '0px',
-                
+
 
             },
             toolbarBot: {
@@ -97,12 +98,12 @@ function Navbar() {
                 // vertical padding + font size from searchIcon
                 paddingLeft: `calc(1em + ${theme.spacing(6)}px)`,
             },
-            
+
         }));
 
     const classes = useStyles();
 
-    
+
 
     return (
 
@@ -116,7 +117,13 @@ function Navbar() {
                     </Grid>
                     <Grid xs={12} container direction="row" justifyContent="space-evenly">
                         <Box m={1} className={classes.text}>
-                            <span className="font-logo">SAVEGAME</span>
+                        <Link to='/home' className="link">
+                            <IconButton aria-label="add to shopping cart" className={classes.button}>
+                                <span className="font-logo">SAVEGAME</span>
+                            </IconButton>
+                        </Link>
+
+
                         </Box>
                         <Box m={1} className={classes.search}>
 
@@ -130,9 +137,15 @@ function Navbar() {
                                 }} />
                         </Box>
                         <Box m={1}  >
-                            <IconButton aria-label="add to shopping cart" className={classes.button}>
-                                <LoginIcon />
-                            </IconButton>
+
+                            <Link to='/login' className="link">
+                                <IconButton aria-label="add to shopping cart" className={classes.button}>
+                                    <LoginIcon />
+                                </IconButton>
+                            </Link>
+
+
+
                         </Box>
                         <Box m={1}>
                             <IconButton aria-label="add to shopping cart" className={classes.button}>
@@ -142,22 +155,22 @@ function Navbar() {
                     </Grid>
                     <Grid xs={12} container direction="row" alignItems="center" justifyContent="space-evenly" className={classes.toolbarBot}>
                         <Box component='span' m={1} className={classes.logoDirection}>
-                           <Box className={classes.logo}>
-                                 <PlayStation  />
-                           </Box>
-                                            
+                            <Box className={classes.logo}>
+                                <PlayStation />
+                            </Box>
+
                         </Box>
                         <Box component='span' m={1} className={classes.logoDirection}>
                             <Box className={classes.logo}  >
-                                  <Xbox/>
-                                  
-                            </Box>           
+                                <Xbox />
+
+                            </Box>
                         </Box>
                         <Box component='span' m={1} className={classes.logoDirection}>
-                           <Nintendo/>
+                            <Nintendo />
                         </Box>
                         <Box component='span' m={1} className={classes.logoDirection}>
-                            <PCs/>
+                            <PCs />
                         </Box>
                     </Grid>
                 </Grid>

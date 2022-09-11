@@ -3,29 +3,39 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import PopupState, { bindMenu, bindTrigger } from 'material-ui-popup-state';
 import { createStyles, IconButton, makeStyles, Theme } from '@mui/material';
-
+import { Link } from 'react-router-dom';
+import './Nintendo.css';
 
 function Nintendo(){
     return(
-        <PopupState variant='popover' >
-            {(popupState) =>(
-                <>
-                    <div>
-                        <IconButton {...bindTrigger(popupState)}>
-                        <img src="https://i.imgur.com/qaiCvi0.png" width={60}  />
-                        </IconButton>
-                        <span className='padding-logo'>NINTENDO</span>
-                    </div>
+        <>
+        <div className='nav-play' >
 
-                    <Menu {...bindMenu(popupState)}>
-                        <MenuItem onClick={popupState.close}>Nintendo Switch</MenuItem>
-                        <MenuItem onClick={popupState.close}>Nintendo Wii</MenuItem>
-                        <MenuItem onClick={popupState.close}>Super Nintendo</MenuItem>
-                        
-                    </Menu>
-                </>
-            )}
-        </PopupState>
+        <img src="https://i.imgur.com/qaiCvi0.png" width={60}  />
+
+            <nav className="dropdownmenu">
+                <ul>
+
+                    <li><span> NINTENDO</span>
+                        <ul id="submenu-nintendo">
+                            <li><Link to="">Nintendo Switch</Link></li>
+                            <li><Link to="">Nintendo Wii</Link></li>
+                            <li>
+                                <Link to="">Super Nintendo</Link>
+                            </li>
+                           
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+
+
+        </div>
+
+    </>
+       
+          
     );
 }
 

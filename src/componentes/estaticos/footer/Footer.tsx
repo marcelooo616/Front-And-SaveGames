@@ -5,6 +5,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import React from "react";
 import './Footer.css'
+import PlayStation from "../navbar/PlayStation";
 
 function Footer() {
     const useStyles = makeStyles((theme: Theme) =>
@@ -172,6 +173,12 @@ function Footer() {
                             <GitHubIcon />
                         </Link>
                     </Button>
+                    
+                            
+                            
+                            
+
+                        
                 </Grid>
 
                 <Grid xs={12}>

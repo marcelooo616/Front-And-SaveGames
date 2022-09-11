@@ -8,6 +8,9 @@ import Footer from './componentes/estaticos/footer/Footer';
 import Login from './paginas/login/Login';
 import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
+import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
+import Navbar2 from './componentes/estaticos/navbar/Navbar2';
+
 
 function App() {
   return (
@@ -18,11 +21,13 @@ function App() {
 
       <Router>
           <Navbar />
+          
             <div>
               <Routes> 
                 <Route path="/" element={ <Home /> } />
                 <Route path="/home" element={ <Home /> } />
                 <Route path="/login" element={ <Login /> } />
+                <Route path="/cadastroUsuario" element={ <CadastroUsuario /> } />
                 
               </Routes>
             </div>

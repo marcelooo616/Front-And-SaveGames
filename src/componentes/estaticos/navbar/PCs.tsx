@@ -6,30 +6,39 @@ import MenuItem from '@mui/material/MenuItem';
 import PopupState, { bindMenu, bindTrigger } from 'material-ui-popup-state';
 import { createStyles, IconButton, makeStyles, Theme } from '@mui/material';
 import { Box } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import './PCs.css';
 
 function PCs(){
 
     return (
-        <PopupState variant="popover">
-            {(popupState) => (
-                <>
-                    <Box >
-                        <IconButton  {...bindTrigger(popupState)}>
-                            <img src="https://i.imgur.com/ScXZmz8.png" width={60}  />
-                        </IconButton>
-                        <span className='padding-logo'>PCs</span>
+        <>
+        <div className='nav-play' >
+
+        <img src="https://i.imgur.com/ScXZmz8.png" width={60}  />
+
+            <nav className="dropdownmenu">
+                <ul>
+
+                    <li><span> PCs</span>
+                        <ul id="submenu-PCs">
+                            <li><Link to="">Desenvolvimento</Link></li>
+                            <li><Link to="">Desenvolvimento</Link></li>
+                            <li>
+                                <Link to="">Desenvolvimento</Link>
+                            </li>
+                            <li><Link to="">Desenvolvimento</Link></li>
+                            <li><Link to="">Desenvolvimento</Link></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
 
 
-                    </Box>
-                    <Menu {...bindMenu(popupState)}>
-                        <MenuItem onClick={popupState.close}>PlayStation </MenuItem>
-                        <MenuItem onClick={popupState.close}>Xbox </MenuItem>
-                        <MenuItem onClick={popupState.close}>Nintendo</MenuItem>
-                        
-                    </Menu>
-                </>
-            )}
-        </PopupState>
+        </div>
+
+    </>
     );
 
 }

@@ -1,10 +1,12 @@
-.grid{
+.grid-cadastro{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    width: 100%;
+    margin: 50px;
     
     
     
@@ -17,7 +19,8 @@
     
     width: 100%;
 }
-.form{
+.cadastro-form{
+    
     
     
     border-radius: 0px 0px 20px 20px;
@@ -25,7 +28,7 @@
     padding: 3rem;
    
 }
-.login-title{
+.cadastro-title{
     
     border-radius: 20px 20px 0px 0px;
     background-color: #4169e1;
@@ -34,10 +37,11 @@
     padding: 20px;
     color: aliceblue;
 }
-.textfield{
+.cadastro-textfield{
+    border-radius: 5px;
     background-color: aliceblue;
+   
 }
-.textDecorator{
-    text-decoration: none !important;
-    color: white;
+.usuario-cadastro{
+    width: 500px;
 }

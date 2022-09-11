@@ -27,6 +27,7 @@ import Xbox from "./Xbox";
 import Nintendo from "./Nintendo";
 import PCs from "./PCs";
 import { Link } from 'react-router-dom';
+import Navbar2 from "./Navbar2";
 
 
 function Navbar() {
@@ -39,6 +40,7 @@ function Navbar() {
                 backgroundColor: '#e5e4fb',
                 width: '60%',
                 borderRadius: "30px"
+
             },
             searchIcon: {
                 padding: theme.spacing(0, 2),
@@ -81,22 +83,28 @@ function Navbar() {
             toobarTop: {
                 backgroundColor: '#4b70e9',
 
+
             },
             toolbarMid: {
                 backgroundColor: '#4169e1',
-                paddingLeft: '0px',
-                paddingRight: '0px',
+                
+               
+                
 
 
             },
             toolbarBot: {
                 backgroundColor: 'black',
+
             },
 
             inputInput: {
                 padding: theme.spacing(2, 5, 1, 0),
                 // vertical padding + font size from searchIcon
                 paddingLeft: `calc(1em + ${theme.spacing(6)}px)`,
+            },
+            root: {
+                maxWidth: '100%',
             },
 
         }));
@@ -106,77 +114,85 @@ function Navbar() {
 
 
     return (
+        <div className={classes.root}>
 
-        <AppBar position="static"  >
+            <AppBar position="static"  >
 
-            <Toolbar className={classes.toolbarMid}>
-                <Grid container>
-                    <Grid xs={12} container direction="row-reverse" className={classes.toobarTop}  >
-                        <Box m={1}>Sobre</Box>
-                        <Box m={1}>Contato</Box>
-                    </Grid>
-                    <Grid xs={12} container direction="row" justifyContent="space-evenly">
-                        <Box m={1} className={classes.text}>
-                        <Link to='/home' className="link">
-                            <IconButton aria-label="add to shopping cart" className={classes.button}>
-                                <span className="font-logo">SAVEGAME</span>
-                            </IconButton>
-                        </Link>
-
-
-                        </Box>
-                        <Box m={1} className={classes.search}>
-
-                            <div className={classes.searchIcon}>
-                                <SearchIcon />
-                            </div>
-                            <InputBase placeholder=" Pesquisa..."
-                                classes={{
-
-                                    input: classes.inputInput,
-                                }} />
-                        </Box>
-                        <Box m={1}  >
-
-                            <Link to='/login' className="link">
-                                <IconButton aria-label="add to shopping cart" className={classes.button}>
-                                    <LoginIcon />
-                                </IconButton>
-                            </Link>
+                <Toolbar className={classes.toolbarMid}>
+                    <Grid container>
+                        <Grid xs={12} container direction="row-reverse" className={classes.toobarTop}  >
+                            <Box m={1}>Sobre</Box>
+                            <Box m={1}>Contato</Box>
+                        </Grid>
+                        <Grid container direction="row" justifyContent="space-evenly">
+                            <Box m={1} className={classes.text}>
+                                <Link to='/home' className="link">
+                                    <IconButton aria-label="add to shopping cart" className={classes.button}>
+                                        <span className="font-logo">SAVEGAME</span>
+                                    </IconButton>
+                                </Link>
 
 
+                            </Box>
+                            <Box m={1} className={classes.search}>
 
-                        </Box>
-                        <Box m={1}>
-                            <IconButton aria-label="add to shopping cart" className={classes.button}>
-                                <AddShoppingCartIcon />
-                            </IconButton>
-                        </Box>
-                    </Grid>
-                    <Grid xs={12} container direction="row" alignItems="center" justifyContent="space-evenly" className={classes.toolbarBot}>
-                        <Box component='span' m={1} className={classes.logoDirection}>
-                            <Box className={classes.logo}>
-                                <PlayStation />
+                                <div className={classes.searchIcon}>
+                                    <SearchIcon />
+                                </div>
+                                <InputBase placeholder=" Pesquisa..."
+                                    classes={{
+
+                                        input: classes.inputInput,
+                                    }} />
+                            </Box>
+                            <Box m={1}  >
+
+                                <Link to='/login' className="link">
+                                    <IconButton aria-label="add to shopping cart" className={classes.button}>
+                                        <LoginIcon />
+                                    </IconButton>
+                                </Link>
+
+
+
                             </Box>
 
-                        </Box>
-                        <Box component='span' m={1} className={classes.logoDirection}>
-                            <Box className={classes.logo}  >
+                            <Box m={1}>
+                                <IconButton aria-label="add to shopping cart" className={classes.button}>
+                                    <AddShoppingCartIcon />
+                                </IconButton>
+                            </Box>
+                        </Grid>
+                        <Grid xs={12} container direction="row" justifyContent="space-evenly" className={classes.toolbarBot}>
+                            <Box className={classes.logoDirection}>
+
+                                <PlayStation />
+
+
+                            </Box>
+                            <Box component='span' m={1} className={classes.logoDirection}>
+
                                 <Xbox />
 
-                            </Box>
-                        </Box>
-                        <Box component='span' m={1} className={classes.logoDirection}>
-                            <Nintendo />
-                        </Box>
-                        <Box component='span' m={1} className={classes.logoDirection}>
-                            <PCs />
-                        </Box>
-                    </Grid>
-                </Grid>
-            </Toolbar>
-        </AppBar>
 
+                            </Box>
+                            <Box component='span' m={1} className={classes.logoDirection}>
+                                <Nintendo />
+                            </Box>
+                            <Box component='span' m={1} className={classes.logoDirection}>
+                                <PCs />
+                            </Box>
+                        </Grid>
+
+                       
+                    
+
+                    </Grid>
+                    
+                        
+                </Toolbar>
+            </AppBar>
+        </div>
 
     );
 }

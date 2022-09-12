@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { alpha, makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -26,11 +26,39 @@ import PlayStation from "./PlayStation";
 import Xbox from "./Xbox";
 import Nintendo from "./Nintendo";
 import PCs from "./PCs";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navbar2 from "./Navbar2";
+import useLocalStorage from "react-use-localstorage";
+import UserLogin from "../../models/UserLogin";
 
 
 function Navbar() {
+    let navigate  = useNavigate();
+    const [token, setToken] = useLocalStorage('token');
+    const [userLogin, setUserLogin] = useState<UserLogin>(
+        {
+            id:0,
+            usuario:'',
+            senha:'',
+            token:''
+        }
+        );
+
+        var admin;
+       
+       if(token == 'Basic cm9vdEBlbWFpbC5jb20uYnI6MTIzNDU2Nzg='){
+
+        admin = <div>
+            <span>usuario admin</span>
+        </div>
+
+       }else{
+        
+        admin = <div>
+            <span>usuario comun</span>
+        </div>
+        
+       };
 
     const useStyles = makeStyles((theme: Theme) =>
         createStyles({
@@ -183,6 +211,9 @@ function Navbar() {
                                 <PCs />
                             </Box>
                         </Grid>
+                        <Box>
+                        {admin}
+                        </Box>
 
                        
                     
@@ -192,7 +223,9 @@ function Navbar() {
                         
                 </Toolbar>
             </AppBar>
+          
         </div>
+       
 
     );
 }

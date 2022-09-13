@@ -5,8 +5,6 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import React from "react";
 import './Footer.css'
-import PlayStation from "../navbar/PlayStation";
-
 function Footer() {
     const useStyles = makeStyles((theme: Theme) =>
         createStyles({
@@ -17,23 +15,15 @@ function Footer() {
                     width: '25ch',
                     backgroundColor: 'white',
                     borderRadius: '16px',
-
-
-
                 }
             },
-
             footer: {
                 backgroundColor: 'black',
-
-
             },
             titulo: {
                 color: 'white',
                 textAlign: 'center',
-
                 fontSize: '25px',
-
             },
             input: {
                 display: 'flex',
@@ -42,20 +32,10 @@ function Footer() {
                 justifyContent: 'space-evenly',
                 color: 'white',
                 margin: '50px',
-
-
-
-
-            },
-            form: {
-
-
-
             },
             margin: {
                 margin: theme.spacing(1),
                 backgroundColor: 'red',
-
             },
             extendedIcon: {
                 marginRight: theme.spacing(1),
@@ -67,9 +47,7 @@ function Footer() {
                 textAlign: 'center',
                 fontSize: '10px',
                 color: 'white'
-
             },
-
             socialButton: {
                 display: 'flex',
                 flexDirection: 'row',
@@ -77,11 +55,7 @@ function Footer() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 color: 'white',
-
-
                 backgroundColor: 'rgb(27, 27, 27)'
-
-
             },
             formasDePagamento: {
                 display: 'flex',
@@ -89,25 +63,16 @@ function Footer() {
                 backgroundColor: 'rgb(7, 10, 5)',
                 color: 'white',
                 textAlign: 'center'
-
             },
             img: {
                 display: 'flex',
                 flexWrap: 'wrap',
                 height: '50px',
                 width: '65px',
-
             }
-
-
-
-
-
         }));
 
     const classes = useStyles();
-
-
     return (
         <>
             <Grid container>
@@ -118,7 +83,7 @@ function Footer() {
                         </Box>
                     </Grid>
                     <Grid xs={12} className={classes.input}>
-                        <Box className={classes.form}>
+                        <Box >
                             <form className={classes.root} noValidate autoComplete="off">
                                 <TextField id="filled-basic" label="Nome" variant="filled" className="textfield-Name" />
                             </form>
@@ -172,25 +137,15 @@ function Footer() {
                         <Link>
                             <GitHubIcon />
                         </Link>
-                    </Button>
-                    
-                            
-                            
-                            
-
-                        
+                    </Button>                                                                       
                 </Grid>
-
                 <Grid xs={12}>
                     <div className="div">
                         <span className={classes.Copyright}>© Copyright 2022 savegames.com.br - All Rights Reserved - Legal</span>
                     </div>
                 </Grid>
-
-
             </Grid>
         </>
     );
-
 }
 export default Footer;

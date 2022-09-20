@@ -22,13 +22,6 @@
    }
    
   
-   
-  
-   
-   
-   
-   
-   
    button:active {
     transform: scale(0.95);
    }
@@ -72,5 +65,7 @@
     padding: 30px;
 
    }
+   
+   
   
    

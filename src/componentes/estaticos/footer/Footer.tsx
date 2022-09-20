@@ -19,6 +19,7 @@ function Footer() {
             },
             footer: {
                 backgroundColor: 'black',
+                
             },
             titulo: {
                 color: 'white',
@@ -75,7 +76,7 @@ function Footer() {
     const classes = useStyles();
     return (
         <>
-            <Grid container>
+            <Grid container className="footer">
                 <Grid xs={12} className={classes.footer}>
                     <Grid xs={12}>
                         <Box className={classes.titulo} m={1} >

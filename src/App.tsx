@@ -10,6 +10,11 @@ import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import Navbar from './componentes/estaticos/navbar/Navbar';
+import ListaProdutos from './componentes/genero/produtos/listaprodutos/ListaProduto';
+import ListaGenero from './componentes/genero/listagenero/ListaGenero';
+import HomeProduto from './componentes/homeprodutos/HomeProduto';
+import HomeProdutos from './componentes/homeprodutos/HomeProduto';
+
 
 
 
@@ -29,6 +34,9 @@ function App() {
                 <Route path="/home" element={ <Home /> } />
                 <Route path="/login" element={ <Login /> } />
                 <Route path="/cadastroUsuario" element={ <CadastroUsuario /> } />
+                <Route path="/listaprodutos" element={ <ListaProdutos /> } />
+                <Route path="/genero" element={ <ListaGenero /> } />
+                <Route path="/produtos" element={ <HomeProdutos/> } />
                 
               </Routes>
             </div>

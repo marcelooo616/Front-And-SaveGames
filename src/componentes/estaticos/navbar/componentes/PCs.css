@@ -37,7 +37,7 @@
 	opacity: 0;
 	position: absolute;
     width: 200px !important;
-	top: 35px;
+	top: 22px !important;
 	visibility: hidden;
 	z-index: 1;
 }

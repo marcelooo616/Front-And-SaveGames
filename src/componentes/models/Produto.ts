@@ -1,4 +1,4 @@
-import Genero from './Genero';
+import Categoria from './Genero';
 
 interface Produto {
     id: number;
@@ -8,7 +8,7 @@ interface Produto {
     valor: number;
     lancamento: string;
     foro: string;
-    Genero?: Genero | null;
+    Categoria?: Categoria | null;
 }
 
 export default Produto;

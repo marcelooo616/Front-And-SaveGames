@@ -33,20 +33,24 @@ function NavbarAdmin() {
 
         <Grid container>
             <Grid xs={12} className="menu-admin" >
+               
             <Button className="button-admin">
                 <Box m={5} className="box-item" >
                    
                         <span>analytics</span>
                     
                 </Box>
-                </Button>
-                <Button className="button-admin">
+            </Button>
+          
+            <Link to="/genero">
+            <Button className="button-admin">
                 <Box m={5}>
                     
                         <span>Generos</span>
                     
                 </Box>
                 </Button>
+                </Link>
                 <Button className="button-admin">
                 <Box m={5}>
                     

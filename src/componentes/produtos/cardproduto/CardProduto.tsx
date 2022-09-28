@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-import './ListaProdutos.css';
+import './CardProduto.css';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import useLocalStorage from 'react-use-localstorage';
-import UserLogin from '../../../models/UserLogin';
+import UserLogin from '../../models/UserLogin';
 
-function ListaProdutos() {
+function CardProdutos() {
 
   const [token] = useLocalStorage('token');
     const [] = useState<UserLogin>(
@@ -89,4 +89,4 @@ function ListaProdutos() {
     </>)
 }
 
-export default ListaProdutos;
+export default CardProdutos;
